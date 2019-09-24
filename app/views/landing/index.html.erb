@@ -1,3 +1,15 @@
+<button class="new article" name="New Article">New Article</button>
+
+<form class="new-article-form" action='#'>
+    <div class="field">
+    <label>Title</label>
+    <input type="string" name="title" id="article-title">
+    </div>
+    <div class="field">
+    <label>Content</label>
+    <input type="text" name="content" id="article-content">
+    </div>
+    <button class="create article" name="Create Article">Create Article</button>
 <ul>
     <% @articles.each do |article| %>
         <li>

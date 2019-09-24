@@ -3,17 +3,17 @@ Given("I visit the {string} page") do |landing|
   end
   
   When("I click {string} link") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    click_button("New Article")
   end
   
-  When("I fill in {string} with {string}") do |string, string2|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("I fill in {string} with {string}") do |title, text|
+    fill_in("title", :with => title, :with => text)
   end
   
   When("I click {string} button") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    click_button("Create Article")
   end
   
-  Then("I should be on {string} page") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("I should be on {string} page") do |rails5|
+    # expect(page).to have_content rails5
   end
