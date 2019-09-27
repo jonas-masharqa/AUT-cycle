@@ -12,6 +12,6 @@ When("I click on {string}") do |element|
  click_on element
 end
 
-When("I fill in {string} with {string}") do |string, string2|
-  fill_in string, :with => string2
+When("I fill in {string} with {string}") do |field, content|
+  fill_in field, :with => content
 end
