@@ -1,4 +1,4 @@
-Given("the following articles exist") do |table|
+Given("the following article exist") do |table|
   table.hashes.each do |article|
     Article.create!(article)
   end
