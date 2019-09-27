@@ -1,20 +1,12 @@
-<button class="new article" name="New Article">New Article</button>
-
-<form class="new-article-form" action='#'>
-    <div class="field">
-    <label>Title</label>
-    <input type="string" name="title" id="article-title">
-    </div>
-    <div class="field">
-    <label>Content</label>
-    <input type="text" name="content" id="article-content">
-    </div>
-    <button class="create article" name="Create Article">Create Article</button>
+    
 <ul>
     <% @articles.each do |article| %>
         <li>
             <%= article.title %><br />
-            <%= article.content %>
+            <%= article.content %><br />
+            <%= link_to 'Show', article_path(article) %>
         </li>
     <% end %>
 </ul>
+
+<%= link_to 'New Article', "articles/new" %>
