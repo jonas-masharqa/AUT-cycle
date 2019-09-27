@@ -10,9 +10,10 @@ Feature: Edit article
 		And I visit the "landing" page
 
 	Scenario:
-		And I click on "edit"
-		Then I should be on "craft" page
+		And I click on "Edit"
+		Then I visit the edit page
 		And I fill in "content" with "hello school"
+		Then I should be on "hello school" page
 		Then I should see "Article has been edited"
 
 		
