@@ -18,3 +18,15 @@ end
 Then("I should see flash {string}") do |string|
 	page.should have_css('.flashnotice', text: "Please include an '@' in the email address.")
   end
+
+Given("the following article exist") do |table|
+	table.hashes.each do |article|
+		Article.create!(article)
+	end
+end
+
+Given("the following user exist") do |table|
+		table.hashes.each do |user_hash|
+		  FactoryBot.create(:user, user_hash)
+		end
+	end

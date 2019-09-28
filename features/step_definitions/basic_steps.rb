@@ -1,9 +1,3 @@
-Given("the following article exist") do |table|
-  table.hashes.each do |article|
-    Article.create!(article)
-  end
-end
-  
 Given("I visit the {string} page") do |string|
   visit root_path
 end
