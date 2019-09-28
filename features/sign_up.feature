@@ -5,12 +5,31 @@ Feature: User sign up
 
     Background: 
         Given I am on the "sign in" page
-
-    Scenario: Signing up as a user[Happy path]
-        When I click on "Sign up"
+        And I click on "Sign up"
         Then I should be on the "sign up" page
-        And I fill in "Email" with "user@gmail.com"
+
+    Scenario: Signing up as a user[Happy Path]
+        When I fill in "Email" with "user@gmail.com"
         And I fill in "Password" with "password"
         And I fill in "Password confirmation" with "password"
         And I click on "Sign up"
         Then I visit the "landing" page
+
+        Scenario: User doesn't fill out forms[Sad Path]
+            When I click on "Sign up"
+            And I should see "Email can't be blank"
+            And I should see "Password can't be blank"
+
+        Scenario: User inputs password which is less than 6 charactes[Sad Path]
+            When I fill in "Email" with "user@gmail.com"
+            And I fill in "Password" with "hey"
+            And I fill in "Password confirmation" with "hey"
+            And I click on "Sign up"
+            Then I should see "Password is too short"
+
+        Scenario: User puts in different password in confirmation
+            When I fill in "Email" with "user@gmail.com"
+            And I fill in "Password" with "hey"
+            And I fill in "Password" with "hello"
+            And I click on "Sign up"
+            Then I should see "Password confirmation doesn't match Password"

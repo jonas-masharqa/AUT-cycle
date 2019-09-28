@@ -14,3 +14,7 @@ end
 Then("I should be on the {string} page") do |string|
 	visit new_user_registration_path
 end
+
+Then("I should see flash {string}") do |string|
+	page.should have_css('.flashnotice', text: "Please include an '@' in the email address.")
+  end
