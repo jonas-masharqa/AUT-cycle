@@ -1,10 +1,10 @@
-Feature: User sign up
+Feature: User can sign up
     As a user
     In order to access the articles
     I need to be able to sign up.
 
     Background: 
-        Given the following user exist
+        Given the following user exists
             |email                  |password|
             |stupidnoel@gmail.com   |password|
         And I am on the "sign in" page

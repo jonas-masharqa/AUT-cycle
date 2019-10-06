@@ -11,16 +11,7 @@ When("I click on {string}") do |element|
 end
 
 When("I fill in {string} with {string}") do |field, content|
-  fill_in field, :with => content
-end
-
-Then("I visit the edit page") do
-  expect(page).to eq edit_article
-end
-
-Given("I am logged in as {string}") do |email|
-  user = User.find_by(email: email)
-  login_as(user, scope: :user)
+  fill_in field, with: content
 end
 
 Given("the following article exist") do |table|

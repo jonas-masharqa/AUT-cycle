@@ -8,8 +8,8 @@ Background:
 	| email 				| password |
 	| john@doe.com 	| password |
 	And the following article exist
-	| title | content |
-	| craft | academy |
+	| title 					| content |
+	| super mario 		| nintendo |
 	And I visit the "landing" page
 	And I fill in "Email" with "john@doe.com"
 	And I fill in "Password" with "password"
