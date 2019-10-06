@@ -4,7 +4,7 @@ Feature: User log in
     I need to be able to sign in.
 
     Background:
-        Given the following user exist
+        Given the following user exists
             |email                  |password|
             |stupidnoel@gmail.com   |password|
         And I am on the "sign in" page
@@ -14,5 +14,3 @@ Feature: User log in
         And I fill in "Password" with "password"
         And I click on "Log in"
         Then I visit the "landing" page
-
-    Scenario: 

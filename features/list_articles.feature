@@ -3,13 +3,19 @@ Feature: List articles on landing page
     when I visit the application's landing page,
     I would like to see a list of articles
 
-    Background:
-     Given the following articles exists
-        | title | content |
-        | A breaking news item | Some really breaking action |
-        |Learn Rails 5 | Build awesome rails applications |
+Background:
+    Given the following user exists
+	| email 	   | password |
+	| john@doe.com | password |
+    And the following article exist
+    | title       | content  |
+    | super mario | nintendo |
+    And I visit the "landing" page
+    And I fill in "Email" with "john@doe.com"
+	And I fill in "Password" with "password"
+	And I click on "Log in"
 
-    Scenario: Viewing list of articles on the application's landing page
-        When I am on the landing page
-        Then I should see "A breaking news item"
-        And I should see "Some really breaking action"
+Scenario: Viewing list of articles on the application's landing page
+    When I visit the "landing" page
+    Then I should see "super mario"
+    And I should see "nintendo"
