@@ -13,6 +13,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 
 group :development, :test do
+    gem 'pry-byebug'
+    gem 'pry-rails'
     gem 'rspec-rails'
     gem 'shoulda-matchers'
     gem 'factory_bot_rails'

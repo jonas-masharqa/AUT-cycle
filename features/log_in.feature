@@ -14,5 +14,3 @@ Feature: User log in
         And I fill in "Password" with "password"
         And I click on "Log in"
         Then I visit the "landing" page
-
-    Scenario: 
